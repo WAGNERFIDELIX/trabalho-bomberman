@@ -257,20 +257,27 @@ function atualiza(){
         yorX1 =  Math.floor(Math.random() * 4);  //Número aléatorio de 0 a 3, definindo a direção do inimigo;
         yorX2 =  Math.floor(Math.random() * 4);  //Número aléatorio de 0 a 3, definindo a direção do inimigo;
         yorX3 =  Math.floor(Math.random() * 4);  //Número aléatorio de 0 a 3, definindo a direção do inimigo;
+        yorX10 =  Math.floor(Math.random() * 4);  //Número aléatorio de 0 a 3, definindo a direção do inimigo;
+        yorX11 =  Math.floor(Math.random() * 4);  //Número aléatorio de 0 a 3, definindo a direção do inimigo;
+        yorX12 =  Math.floor(Math.random() * 4);  //Número aléatorio de 0 a 3, definindo a direção do inimigo;
+        yorX13 =  Math.floor(Math.random() * 4);  //Número aléatorio de 0 a 3, definindo a direção do inimigo;
     }
     if(inimigos.length > 0){    
         direcaoIni(inimigo,yorX);
-
         direcaoIni(inimigo2,yorX1);
-
         direcaoIni(inimigo3,yorX2);
-
         direcaoIni(inimigo4,yorX3);
+        direcaoIni(inimigo9,yorX10);
+        direcaoIni(inimigo10,yorX11);
+        direcaoIni(inimigo11,yorX12);
+        direcaoIni(inimigo12,yorX13);
     }
 
     if(inimigos.length === 0 && portas.length<1){
         porta = new Sprite(400,400,50,50,imagemPorta);
         portas.push(porta);
+    } if(inimigos.length > 0){
+        portas = [];
     }
     mostrarVida.textContent = ("Vidas: "+vidas);    //Mostrar vida do personagem principal
 }
@@ -597,7 +604,7 @@ window.addEventListener("keydown",function (e){
                 rodou = false;
                 boneco.x = 100;
                 boneco.y = 100;
-                portas.shift();
+               
             }
             break;
         case RIGHT:
@@ -887,6 +894,10 @@ var yorX;
 var yorX1;
 var yorX2;
 var yorX3;
+var yorX10; 
+var yorX11; 
+var yorX12; 
+var yorX13;
 var pwUR;
 var x;
 var y;
